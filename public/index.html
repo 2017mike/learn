@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Learn-n-Earn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
+</head>
+
+<body>
+
+  <!-- navbar -->
+
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a class="uk-margin-right" href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<br>
+  <!-- campus logo nav  -->
+<div class="uk-container uk-container-small">
+  <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div uk-scrollspy="cls:uk-animation-fade">
+      <div class="uk-card-media-left uk-card-default">
+        <div class="uk-card-media-top">
+          <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: scale">
+            <ul class="uk-slideshow-items">
+              <li>
+                <img src="images/uci.jpg" alt="" uk-cover>
+                <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                  <h3 class="uk-margin-remove">UCI</h3>
+                  <p class="uk-margin-remove"><a href="UCI.html">Find students @UCI!</p></a>
+                </div>
+              </li>
+              <li>
+                <img src="images/ucla.jpg" alt="" uk-cover>
+                <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                  <h3 class="uk-margin-remove">UCLA</h3>
+                  <p class="uk-margin-remove"><a href="UCLA.html">Find students @UCLA!</p></a>
+                </div>
+              </li>
+              <li>
+                <img src="images/ucsb.jpg" alt="" uk-cover>
+                <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                  <h3 class="uk-margin-remove">UCSB</h3>
+                  <p class="uk-margin-remove"><a href="UCSB.html">Find students @UCSB!</p></a>
+                </div>
+              </li>
+              <li>
+                <img src="images/ucsd.jpg" alt="" uk-cover>
+                <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                  <h3 class="uk-margin-remove">UCSD</h3>
+                  <p class="uk-margin-remove"><a href="UCSD.html">Find students @UCSD!</p></a>
+                </div>
+              </li>
+            </ul>
+            <div class="uk-light">
+              <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                uk-slideshow-item="next"></a>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Need some help? Select a campus</h3>
+          <p>Choose the campus in your area to find students ready-to-work!</p>
+        </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<!-- registration card -->
+<div class="uk-text-bold">
+  <div class="uk-container uk-container-small">
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div uk-scrollspy="cls:uk-animation-fade">
+        <h3>Need to find work? <a href="signup.html" button class="uk-button uk-button-primary">Register</a> with us today.</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+    // //function to remove username and token from
+    // //local storage and sends user to login page.
+    // async function logoutUser() {
+    //   localStorage.removeItem('username')
+    //   localStorage.removeItem('token')
+    //   location = '/login.html'
+    // }
+
+    // //function retrieving posts from backend database
+    // async function getPosts() {
+    //   try {
+    //     const { data: posts } = await axios.get('/api/posts', {
+    //       headers: {
+    //         'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //       }
+    //     })
+    //     return posts
+
+    //   } catch (err) {
+    //     location = '/login.html'
+    //   }
+    // }
+
+    // //function to create a singular post and storing
+    // //in the backend.
+    // async function createPost(data) {
+    //   const { data: post } = await axios.post('/api/posts', data, {
+    //     headers: {
+    //       'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //     }
+    //   })
+
+    //   return post
+    // }
+
+    // //function to render a singular post by the user.
+    // async function renderPost({ title, body, User: { username } }) {
+    //   const postElem = document.createElement('div')
+    //   postElem.innerHTML = `
+    //       <div class=" row bg-light p-5 rounded-md mb-2 mt-2">
+          // <h3>${title}</h3>
+          // <p class="lead"><i>posted by ${username}</i></p>
+          // <p class="lead">${body}</p>
+          //
+          <hr class="my-4">
+          //
+        </div>
+        // `
+        // document.getElementById('posts').prepend(postElem)
+        // }
+
+        // //function to render each post in the database.
+        // async function renderPosts() {
+        // const posts = await getPosts()
+
+        // posts.forEach(post => renderPost(post))
+        // }
+
+        // //function renders user's username after retrieving
+        // //from localstorage.
+        // async function renderUsername() {
+        // const username = localStorage.getItem('username')
+
+        // document.getElementById('username').textContent = username
+        // }
+
+        // //eventlistener
+        // document.getElementById('post').addEventListener('click', async function (event) {
+        // event.preventDefault()
+
+        // const post = await createPost({
+        // title: document.getElementById('title').value,
+        // body: document.getElementById('body').value
+        // })
+
+        // renderPost({ ...post, User: { username: localStorage.getItem('username') } })
+        // })
+
+        // document.getElementById('logout').addEventListener('click', logoutUser)
+
+        // renderPosts()
+        // renderUsername() -->
+
+</body>
+
+</html>

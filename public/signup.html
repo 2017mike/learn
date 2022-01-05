@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="/public/reset.css">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
+  <script src="uikit/dist/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="./css/signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR-------------------------------- -->
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a class="uk-margin-right" href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+
+  <!-- NAVBAR----------------------------------- -->
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p>Learn-n-Earn</p>
+  </div>
+
+  <div class="webInfo uk-flex uk-flex-center">
+    <p id="webDesc">A middle ground for Employers and Students</p>
+  </div>
+
+  <div class="uk-container uk-margin-bottom uk-flex uk-flex-center uk-animation-toggle">
+    <p id="logintext" class="light-blue acme ">Create an account or 
+    <a class="uk-button uk-button-text uk-text-top uk-text-capitalize uk-animation-shake" href="./login.html" id="loginLink">Login</a>
+    </p>
+  </div>
+
+  <div class="uk-container uk-flex-center">
+    <form class="formContainer uk-grid-medium" uk-grid>
+
+      <div class="uk-width-1-3@s">
+        <p>First Name:</p>
+        <input id="rFirstname" class="uk-input uk-box-shadow-hover-large" type="text">
+      </div>
+
+      <div class="uk-width-1-3@s">
+        <p>Last Name:</p>
+        <input id="rLastname" class="uk-input uk-box-shadow-hover-large" type="text">
+      </div>
+
+      <div class="uk-width-1-3@s">
+        <p>Username:</p>
+        <input id="rUsername" class="uk-input uk-box-shadow-hover-large" type="text">
+      </div>
+
+      <div class="uk-width-1-2@s">
+        <p>Email:</p>
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon" uk-icon="icon: mail"></span>
+          <input id="rEmail" class="uk-input uk-box-shadow-hover-large" type="text">
+        </div>
+      </div>
+
+      <div class="uk-width-1-2@s">
+        <p>Password:</p>
+        <div class="uk-inline uk-width-1-1">
+          <span class="uk-form-icon" uk-icon="icon: lock"></span>
+          <input id="rPassword" class="uk-input uk-box-shadow-hover-large" type="password">
+        </div>
+      </div>
+
+      <div class="uk-width-1-3@s">
+        <p>Please select your campus:</p> 
+        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCI" checked> UCI</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCLA"> UCLA</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCSB"> UCSB</label>
+          <label><input class="uk-radio b-white" type="radio" name="campus" value="UCSD"> UCSD</label>
+        </div>
+      </div>
+
+      <div class="uk-width-1-3@s">
+        <p>Please select all tasks you are available for:</p>
+        <div class="uk-grid-small uk-grid">
+          <label><input class="uk-checkbox b-white" type="checkbox" name="yardwork" value="Yard Work"> Yard Work</label>
+          <label><input class="uk-checkbox b-white" type="checkbox" name="furniture" value="Furniture Assembly"> Furniture Assembly</label>
+          <label><input class="uk-checkbox b-white" type="checkbox" name="moving" value="Help Moving"> Help Moving</label>
+          <label><input class="uk-checkbox b-white" type="checkbox" name="cleaning" value="Cleaning"> Cleaning</label>
+          <label><input class="uk-checkbox b-white" type="checkbox" name="delivery" value="Delivery"> Delivery</label>
+          <label><input class="uk-checkbox b-white" type="checkbox" name="shopping" value="Shopping"> Shopping</label>
+          <label><input class="uk-checkbox b-white" type="checkbox" name="errands" value="Errands"> Errands</label>
+        </div>
+      </div>
+
+      <div class="uk-flex uk-flex-center signupPad uk-width-1-3@s">
+        <button class="uk-button uk-button-large uk-text-capitalize uk-box-shadow-hover-large" id="signupBtn">Create Account</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+
+    let selected = document.querySelector('input[type=radio][name=campus]:checked')
+
+    let yardwork = document.querySelector('input[type=checkbox][name=yardwork]:checked')
+    let furniture = document.querySelector('input[type=checkbox][name=furniture]:checked')
+    let moving = document.querySelector('input[type=checkbox][name=moving]:checked')
+    let cleaning = document.querySelector('input[type=checkbox][name=cleaning]:checked')
+    let delivery = document.querySelector('input[type=checkbox][name=delivery]:checked')
+    let shopping = document.querySelector('input[type=checkbox][name=shopping]:checked')
+    let errands = document.querySelector('input[type=checkbox][name=errands]:checked')
+
+    function registerUser() {
+        let newUser = {
+          firstname: document.getElementById('rFirstname').value,
+          lastname: document.getElementById('rLastname').value,
+          username: document.getElementById('rUsername').value,
+          email: document.getElementById('rEmail').value,
+          password: document.getElementById('rPassword').value,
+          campus: selected.value,
+          yardwork: yardwork.value,
+          furniture: furniture.value,
+          moving: moving.value,
+          cleaning: cleaning.value,
+          delivery: delivery.value,
+          shopping: shopping.value,
+          errands: errands.value
+        }
+        axios.post('/api/users/register', newUser)
+          .then(res => {
+            console.log(res)
+            console.log("user created!")
+            localStorage.setItem('token', res.data.token)
+            location = '/'
+          })
+      }
+
+      document.getElementById('signupBtn').addEventListener('click', event => {
+        event.preventDefault()
+
+        selected = document.querySelector('input[type=radio][name=campus]:checked')
+
+        yardwork = document.querySelector('input[type=checkbox][name=yardwork]:checked')
+
+        if (yardwork === null) {
+          yardwork = false
+        }
+
+        furniture = document.querySelector('input[type=checkbox][name=furniture]:checked')
+
+        if (furniture === null) {
+          furniture = false
+        }
+
+        moving = document.querySelector('input[type=checkbox][name=moving]:checked')
+
+        if (moving === null) {
+          moving = false
+        }
+
+        cleaning = document.querySelector('input[type=checkbox][name=cleaning]:checked')
+
+        if (cleaning === null) {
+          cleaning = false
+        }
+
+        delivery = document.querySelector('input[type=checkbox][name=delivery]:checked')
+
+        if (delivery === null) {
+          delivery = false
+        }
+
+        shopping = document.querySelector('input[type=checkbox][name=shopping]:checked')
+
+        if (shopping === null) {
+          shopping = false
+        }
+
+        errands = document.querySelector('input[type=checkbox][name=errands]:checked')
+
+        if (errands === null) {
+          errands = false
+        }
+
+        registerUser()
+        console.log("success!")
+      })
+
+  </script>
+
+</body>
+</html>

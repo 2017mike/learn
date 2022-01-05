@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.js"></script>
+</head>
+
+<body>
+  
+  <!-- navbar -->
+  
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="index.html">Learn-n-Earn</a></li>
+        <li>
+          <a href="#">Campuses</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="UCLA.html">UCLA</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSB.html">UCSB</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCSD.html">UCSD</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="UCI.html">UCI</a></li>
+              <li class="uk-nav-divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a class="uk-margin-right" href="#">About</a>
+          <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="formContainer uk-container-expand uk-margin-large-top uk-flex uk-flex-center">
+    <h1 class="light-blue acme">Login</h1>
+  </div>
+
+  <div class="uk-container uk-flex uk-flex-center uk-animation-toggle">
+    <h5 class="light-blue acme uk-text-center">Not a user yet?<br>
+    <a id="regLink" class="uk-button uk-button-text uk-text-capitalize uk-animation-shake" href="./signup.html"><b>Register here!</b></a>
+    </h5>
+  </div>
+
+  <div class="formContainer uk-container uk-container-xsmall uk-margin-top uk-flex uk-flex-center uk-box-shadow-large uk-box-shadow-bottom uk-background-muted">
+
+    <form>
+
+      <div class="uk-container-expand uk-margin-top">
+        <h4 class="acme">Username:</h4>
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: user"></span>
+          <input id="lUsername" class="uk-input uk-form-width-large uk-box-shadow-hover-medium" type="text">
+        </div>
+      </div>
+
+      <div class="uk-container-expand uk-margin">
+        <h4 class="acme">Password:</h4>
+        <div class="uk-inline">
+          <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+          <input id="lPassword" class="uk-input uk-form-width-large uk-box-shadow-hover-medium" type="password">
+        </div>
+      </div>
+
+      <div class="uk-margin-bottom">
+        <button id="login" class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-text-capitalize">Login</button>
+      </div>
+
+    </form>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <script>
+
+    function loginUser() {
+        let existingUser = {
+          username: document.getElementById('lUsername').value,
+          password: document.getElementById('lPassword').value
+        }
+        axios.post('/api/users/login', existingUser)
+          .then(res => {
+            console.log(res)
+            localStorage.setItem('token', res.data.token)
+            location = '/'
+
+          })
+      }
+
+    document.getElementById('login').addEventListener('click', event => {
+      event.preventDefault()
+      loginUser()
+      console.log("success!")
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+.webInfo {
+  color: rgb(107, 176, 255);
+  font-size: xxx-large;
+  font-family: 'Acme', sans-serif;
+}
+
+#webDesc {
+  font-size: xx-large;
+}
+
+.formContainer {
+  font-size: medium;
+  color: white;
+  font-family: 'Acme', sans-serif;
+  padding-left: 20px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgb(107, 176, 255);
+}
+
+#signupBtn {
+  border: 1px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(107, 176, 255);
+  font-size: x-large;
+}
+
+.signupPad {
+  padding-top: 20px;
+}
+
+#logintext {
+  font-size: medium;
+  padding-top: 20px;
+}
+
+#loginLink {
+  padding-left: 1px;
+  padding-top: 2px;
+  /* color: rgb(124, 124, 124); */
+}
+
+#loginLink:hover {
+  color: red;
+  background-color: transparent;
+}
+
+.b-white {
+  background-color: white;
+}
